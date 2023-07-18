@@ -1,0 +1,139 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+p {
+    margin: 0;
+}
+p, a, h1, h2, h3, h4, h5, h6, span {
+    font-family: 'Poppins', sans-serif;
+}
+:root {
+    --clr-dark-blue: #3333ff;
+    --clr-light-blue: #edf3fe;
+    --clr-blue-accent: #1865f2;
+    --clr-light-grey: #f7f8fa;
+}
+
+
+header {
+    padding: 0.5rem;
+}
+.pop-up {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 .625rem;
+    min-height: 5dvh;
+    min-height: 5vh;
+
+    border-left: 0.4rem solid var(--clr-blue-accent);
+    border-right: 0.4rem solid var(--clr-light-blue);
+    border-radius: 5px;
+    background-color: var(--clr-light-blue);
+    font-size: 14px;
+}
+.group {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10rem;
+    min-height: 5dvh;
+    min-height: 5vh;
+}
+.left-group{
+    display: flex;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .25em 1em;
+    min-width: 12.5dvh;
+    min-width: 12.5vh;
+    border-radius: 5px;
+    background-color: var(--clr-light-grey);
+}
+.logo {
+    font-size: 2rem;
+    font-weight: 700;
+}
+#khan-logo {
+    font-size: 1.5rem;
+    height: 2em;
+    width: 2em;
+    border-radius: 50%;
+    background-color: rgb(124, 240, 124);
+}
+
+@keyframes rotateYAnimation {
+    from {
+      transform: perspective(800px) rotateY(-90deg);
+    }
+    to {
+      transform: perspective(800px) rotateY(0);
+    }
+  }
+  
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown a {
+    text-decoration: none;
+    font-size: 15px;
+    color: #000;
+}
+
+.dropdown a:hover {
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.dropdown p {
+    font-size: 15px;
+    padding: 10px;
+    height: 20px;
+    border-bottom: 2px solid #F6F6F6;
+}
+
+.dropdown span {
+    display: block;
+    text-decoration: none;
+    font-size: 17px;
+    color: #000;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;  
+    padding: 12px 2px 6px 2px;
+    border-radius: 0.3rem;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 10px 14px;
+    min-width: 160px;
+    z-index: 1;
+    transform-origin: left center;
+    top: 30px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    animation: rotateYAnimation 0.5s ease;
+}
+
+.dropdown:hover span {
+    transform: rotateY(360deg);
+}
